@@ -146,3 +146,9 @@ void main() {
   );
 }
 >>>>>>> c7471e2 (a)
+
+
+///todo: make the splash screen pub.dev package
+///maps in the future now location links
+///other services like ops and medical check
+
