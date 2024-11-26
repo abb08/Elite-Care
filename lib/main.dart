@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
 void main() {
   runApp(const MyApp());
@@ -123,3 +124,25 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+=======
+import 'package:get/get.dart';
+
+// main only deals with routes
+void main() {
+  runApp(
+      GetMaterialApp(
+        initialRoute: '/',
+        unknownRoute: GetPage(name: '/notfound', page: () => UnknownRoutePage()),//just in case
+        getPages: [
+          GetPage(name: '/', page: () => MyHomePage()),
+          GetPage(name: '/second', page: () => Second()),
+          GetPage(
+              name: '/third',
+              page: () => Third(),
+              transition: Transition.zoom
+          ),
+        ],
+      )
+  );
+}
+>>>>>>> c7471e2 (a)
