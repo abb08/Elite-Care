@@ -1,14 +1,15 @@
+
 import 'package:flutter/material.dart';
 
 ///todo: signed in?=> history,signIn view
 ///
 
 
-class History extends StatelessWidget {
-  const History({super.key});
+class MyActivity extends StatelessWidget {
+  const MyActivity({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Container(color: Colors.red,);
   }
 }
