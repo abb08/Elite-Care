@@ -26,7 +26,7 @@ maxLines: 1,
         fontSize: size==0? Dimentions.font20:size,
 
         color: color,
-        //fontFamily: 'Roboto',
+        fontFamily: 'lato',
         fontWeight:bold?FontWeight.bold: FontWeight.w400,
 
 

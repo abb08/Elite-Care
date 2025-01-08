@@ -1,6 +1,9 @@
 import 'package:elite_care/localization/localController.dart';
 import 'package:elite_care/utils/appColors.dart';
 import 'package:elite_care/utils/dimentions.dart';
+import 'package:elite_care/view/home/more.dart';
+import 'package:elite_care/view/home/records.dart';
+import 'package:elite_care/view/home/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 import 'package:get/get.dart';
@@ -26,22 +29,13 @@ class MainPage extends StatelessWidget {
     //pages list
     List<Widget> pages = [
       HomePage(),
-      Center(
-          child: Container(
-        child: Text("1"),
-      )),
-      Center(
-          child: Container(
-        child: Text("2"),
-      )),
+      ServicesPage(),
       Center(
           child: Container(
         child: Text("3"),
       )),
-      Center(
-          child: Container(
-        child: Text("4"),
-      )),
+      RecordsPage(),
+      MorePage(),
     ];
 
     Get.put(LocalController(), permanent: true); //localization
@@ -118,16 +112,13 @@ class MainPage extends StatelessWidget {
                               width: Dimentions.hight45 ,
                             ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(right: Dimentions.hight5),
-                      child: IconButton(
-                        onPressed: () {
-                          ///todo:go to notifications
-                        },
-                        icon: Icon(Icons.notifications),
-                        iconSize: Dimentions.hight50,
-                        color: AppColors.secondColor,
-                      ),
+                    IconButton(
+                      onPressed: () {
+                        ///todo:go to notifications
+                      },
+                      icon: Icon(Icons.notifications),
+                      iconSize: Dimentions.hight50,
+                      color: AppColors.secondColor,
                     ),
                   ],
                 ),
@@ -177,22 +168,22 @@ class MainPage extends StatelessWidget {
                 BottomNavigationBarItem(
                   icon: _buildIcon(
                       'assets/icons/medichand.svg', 1, cont.pageIndex),
-                  label: "MediCare",
+                  label: "Services",
                 ),
                 BottomNavigationBarItem(
                   icon: _buildIcon(
                       'assets/icons/calender.svg', 2, cont.pageIndex),
-                  label: "Records",
+                  label: "Schedule",
                 ),
                 BottomNavigationBarItem(
                   icon: _buildIcon(
                       'assets/icons/recordsicon.svg', 3, cont.pageIndex),
-                  label: "More",
+                  label: "Records",
                 ),
                 BottomNavigationBarItem(
                   icon: _buildIcon(
                       'assets/icons/moreicon.svg', 4, cont.pageIndex),
-                  label: "Account",
+                  label: "More",
                 ),
               ],
             ),

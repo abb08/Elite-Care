@@ -42,6 +42,7 @@ class Dimentions {
   static double font30 = screenHight/28.11428571;
 
    //raduis
+  static double radius10= screenHight/84.34285714;
    static double radius15= screenHight/56.27;
   static double radius20= screenHight/42.2;
    static double radius30= screenHight/28.13;
@@ -61,4 +62,7 @@ class Dimentions {
 
   //bottom hoght
   static double bottomHightBar= screenHight/6.25;
+  //more page
+  static double morePageItemHight= screenHight/19.82978723;
+  static double morePageItemWidth= screenHight/1.105943152;
 }

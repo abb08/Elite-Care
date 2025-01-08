@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:elite_care/utils/appColors.dart';
 import 'package:elite_care/utils/dimentions.dart';
+import 'package:elite_care/view/widgets/GridViewServices.dart';
 import 'package:elite_care/view/widgets/servicesOption.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -13,8 +14,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentCount = (Dimentions.screenWidth/ 250).toInt();
-    final minCount = 2;
+      final currentCount = (Dimentions.screenWidth/ 250).toInt();
+      final minCount = 2;
     PageController pageController = PageController(viewportFraction: 1);
     return Column(
       children: [
@@ -44,21 +45,7 @@ class HomePage extends StatelessWidget {
         ),
         SizedBox(height: Dimentions.hight5,),
 
-           GridView.builder(
-             physics: NeverScrollableScrollPhysics(),
-             shrinkWrap: true,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-
-            crossAxisCount: max(currentCount, minCount), // number of items in each row
-            mainAxisSpacing: Dimentions.hight20, // spacing between rows
-            crossAxisSpacing: Dimentions.hight20, // spacing between columns
-          ),
-          padding: EdgeInsets.all(8.0), // padding around the grid
-          itemCount: 20, // total number of items
-          itemBuilder: (context, index) {
-            return ServiesOption(index: index,);
-          },
-        )
+           Gridviewservices(),
       ],
     );
   }
