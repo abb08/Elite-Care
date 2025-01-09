@@ -9,6 +9,8 @@ class AppColors{
   static final Color blueTextColor = const Color(0xff1D84B5);
   static final Color blackTextColor = const Color(0xff1C1C1C);
   static final Color redTextColor = const Color(0xffFF0000);
+  static final Color redPinColor = const Color.fromRGBO(208, 39, 44, 1);
+
   static final Color greenTextColor = const Color(0xff05BB11);
 
 //theme /icons

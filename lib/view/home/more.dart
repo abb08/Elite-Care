@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../routes/routes_helper.dart';
 import '../../utils/appColors.dart';
 import '../../utils/dimentions.dart';
 import '../widgets/BigText.dart';
@@ -23,40 +25,38 @@ class MorePage extends StatelessWidget {
         SizedBox(
           height: Dimentions.hight20,
         ),
-        InkWell(
-            onTap: (){},
-            child: optionContainer("Profile")),
-
-        InkWell(
-            onTap: (){},
-            child: optionContainer("Statistics")),
-        InkWell(
-            onTap: (){},
-            child: optionContainer("Forum")),
-        InkWell(
-            onTap: (){},
-            child: optionContainer("Settings")),
-        InkWell(
-            onTap: (){},
-            child: optionContainer("FAQ")),
-        SizedBox(height: Dimentions.hight20,),
-
-        InkWell(
-            onTap: (){},
-            child: optionContainer("Logout",Colors.red)),
-
-
+        InkWell(onTap: () {
+          Get.toNamed(RouteHelpler.patientProfile);
+        }, child: optionContainer("Profile")),
+        SizedBox(
+          height: Dimentions.hight20,
+        ),
+        InkWell(onTap: () {}, child: optionContainer("Statistics")),
+        SizedBox(
+          height: Dimentions.hight20,
+        ),
+        InkWell(onTap: () {}, child: optionContainer("Forum")),
+        SizedBox(
+          height: Dimentions.hight20,
+        ),
+        InkWell(onTap: () {}, child: optionContainer("Settings")),
+        SizedBox(
+          height: Dimentions.hight20,
+        ),
+        InkWell(onTap: () {}, child: optionContainer("FAQ")),
+        SizedBox(
+          height: Dimentions.hight45,
+        ),
+        InkWell(onTap: () {}, child: optionContainer("Logout", Colors.red)),
       ],
     );
   }
 }
 
-Widget optionContainer(String text,[Color? color]) {
+Widget optionContainer(String text, [Color? color]) {
   return Container(
     width: Dimentions.morePageItemWidth,
     height: Dimentions.morePageItemHight,
-    margin: EdgeInsets.symmetric(
-        horizontal: Dimentions.hight10, vertical: Dimentions.hight10),
     padding: EdgeInsets.symmetric(
         horizontal: Dimentions.hight10, vertical: Dimentions.hight5),
     decoration: BoxDecoration(
@@ -77,10 +77,9 @@ Widget optionContainer(String text,[Color? color]) {
         alignment: Alignment.centerLeft,
         child: BigText(
           text: text,
-          color:color ?? AppColors.secondColor,
+          color: color ?? AppColors.secondColor,
           bold: true,
           size: Dimentions.font16,
-
         )),
   );
 }

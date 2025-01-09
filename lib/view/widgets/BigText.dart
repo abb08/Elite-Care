@@ -24,7 +24,6 @@ maxLines: 1,
       overflow: overflow,
       style: TextStyle(
         fontSize: size==0? Dimentions.font20:size,
-
         color: color,
         fontFamily: 'lato',
         fontWeight:bold?FontWeight.bold: FontWeight.w400,

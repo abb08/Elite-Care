@@ -1,8 +1,10 @@
 import 'package:elite_care/localization/localController.dart';
+import 'package:elite_care/routes/routes_helper.dart';
 import 'package:elite_care/utils/appColors.dart';
 import 'package:elite_care/utils/dimentions.dart';
 import 'package:elite_care/view/home/more.dart';
 import 'package:elite_care/view/home/records.dart';
+import 'package:elite_care/view/home/schedule.dart';
 import 'package:elite_care/view/home/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
@@ -30,10 +32,7 @@ class MainPage extends StatelessWidget {
     List<Widget> pages = [
       HomePage(),
       ServicesPage(),
-      Center(
-          child: Container(
-        child: Text("3"),
-      )),
+      SchedulePage(),
       RecordsPage(),
       MorePage(),
     ];
@@ -56,11 +55,12 @@ class MainPage extends StatelessWidget {
               children: [
                 //AppBar
                 Row(
+                  mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                       onTap: () {
-                        ///todo:go to profile
+                        Get.toNamed(RouteHelpler.patientProfile);
                       },
                       child: Container(
                         margin: EdgeInsets.only(left: Dimentions.hight5),

@@ -26,6 +26,7 @@ class Dimentions {
    static double hight30 = screenHight/28.13;
   static double hight50 = screenHight/16.86857143;
   static double hight60 = screenHight/14.05714286;
+  static double hight70 = screenHight/12.04897959;
 //width
    // ur still using hight maybe u wanna change it later
   static double width3 = screenHight/281.1428571;
@@ -38,10 +39,14 @@ class Dimentions {
 //font size
    static double font20= screenHight/42.2;
   static double font26 = screenHight/42.2;
+  static double font10= screenHight/84.34285714;
   static double font16 = screenHight/52.75;
   static double font30 = screenHight/28.11428571;
+  static double fontx = screenHight*0.016042781;
+  static double font22 = screenHight*0.022058824;
 
-   //raduis
+
+  //raduis
   static double radius10= screenHight/84.34285714;
    static double radius15= screenHight/56.27;
   static double radius20= screenHight/42.2;
@@ -64,5 +69,14 @@ class Dimentions {
   static double bottomHightBar= screenHight/6.25;
   //more page
   static double morePageItemHight= screenHight/19.82978723;
-  static double morePageItemWidth= screenHight/1.105943152;
+  static double morePageItemWidth= screenWidth/1.105943152;
+  //schedule
+  static double schedulePageItemHight= screenHight/21.6744186;
+  static double schedulePageItemWidth= screenWidth/2.532544379;
+  //profile
+  static double profileContainerHight= screenHight/3.728;
+  static double profilePictureHight= screenHight/6.891961843;
+
+
+
 }
