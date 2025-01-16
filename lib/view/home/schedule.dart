@@ -1,4 +1,4 @@
-import 'package:elite_care/controller/schedulePageController.dart';
+import 'package:elite_care/controller/home/schedulePageController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/appColors.dart';

@@ -23,7 +23,7 @@ class BigText extends StatelessWidget {
 maxLines: 1,
       overflow: overflow,
       style: TextStyle(
-        fontSize: size==0? Dimentions.font20:size,
+        fontSize: size==0? Dimentions.font24:size,
         color: color,
         fontFamily: 'lato',
         fontWeight:bold?FontWeight.bold: FontWeight.w400,

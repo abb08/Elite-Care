@@ -9,7 +9,7 @@ import 'package:elite_care/view/home/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 import 'package:get/get.dart';
-import '../../controller/mainPageCont.dart';
+import '../../controller/home/mainPageCont.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'home.dart';
 

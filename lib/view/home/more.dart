@@ -19,7 +19,7 @@ class MorePage extends StatelessWidget {
         ),
         BigText(
           text: 'More',
-          color: AppColors.secondColor,
+          color: AppColors.blueTextColor,
           bold: true,
         ),
         SizedBox(
@@ -47,7 +47,9 @@ class MorePage extends StatelessWidget {
         SizedBox(
           height: Dimentions.hight45,
         ),
-        InkWell(onTap: () {}, child: optionContainer("Logout", Colors.red)),
+        InkWell(onTap: () {
+          Get.toNamed(RouteHelpler.loginPage);
+        }, child: optionContainer("Logout", Colors.red)),
       ],
     );
   }
@@ -79,7 +81,7 @@ Widget optionContainer(String text, [Color? color]) {
           text: text,
           color: color ?? AppColors.secondColor,
           bold: true,
-          size: Dimentions.font16,
+          size: Dimentions.font18,
         )),
   );
 }

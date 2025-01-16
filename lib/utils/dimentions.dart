@@ -24,9 +24,15 @@ class Dimentions {
    static double hight20 = screenHight/42.2;
    static double hight45 = screenHight/18.76;
    static double hight30 = screenHight/28.13;
+  static double hight34 = screenHight/27.41176471;
+
   static double hight50 = screenHight/16.86857143;
   static double hight60 = screenHight/14.05714286;
   static double hight70 = screenHight/12.04897959;
+  static double hight90 = screenHight/10.35555556;
+  static double hight100 = screenHight/9.32;
+
+
 //width
    // ur still using hight maybe u wanna change it later
   static double width3 = screenHight/281.1428571;
@@ -37,13 +43,17 @@ class Dimentions {
    static double width45 = screenHight/18.76;
   static double width100 = screenHight/8.434285714;
 //font size
-   static double font20= screenHight/42.2;
-  static double font26 = screenHight/42.2;
+
+  static double font20= screenHight/42.17142857;
+  static double font24 = screenHight/35.14285714;
+  static double font26 = screenHight/32.43956044;
   static double font10= screenHight/84.34285714;
-  static double font16 = screenHight/52.75;
+  static double font14= screenHight/60.24489796;
+  static double font16 = screenHight/52.71428571;
+  static double font18 = screenHight/46.85714286;
   static double font30 = screenHight/28.11428571;
-  static double fontx = screenHight*0.016042781;
-  static double font22 = screenHight*0.022058824;
+ // static double fontx = screenHight*0.016042781;
+  //static double font22 = screenHight*0.022058824;
 
 
   //raduis
@@ -55,6 +65,7 @@ class Dimentions {
    static double iconSize24 = screenHight/35.17;
   static double iconSize16 = screenHight/52.75;
   static double iconSize30 = screenHight/28.11428571;
+  static double iconSize35 = screenHight/24.09795918;
 
    //listview size
    static double listViewImageSize = screenWidth/3.25;
@@ -76,6 +87,17 @@ class Dimentions {
   //profile
   static double profileContainerHight= screenHight/3.728;
   static double profilePictureHight= screenHight/6.891961843;
+  static double profileUpcomingContainerHight= screenHight/3.669291339;
+
+
+
+  //loginPage
+
+  static double logInLogoHight= screenHight/5.290644868;
+  static double logInLogoWidth= screenHight/3.864250073;
+
+
+
 
 
 

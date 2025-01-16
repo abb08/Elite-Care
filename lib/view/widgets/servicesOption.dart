@@ -42,7 +42,7 @@ class ServiesOption extends StatelessWidget {
               child: BigText(
                 text: 'Appointments',
                 color: AppColors.textColor,
-                size: Dimentions.font26,
+                size: Dimentions.font20,
                 bold: true,
               ),
             )

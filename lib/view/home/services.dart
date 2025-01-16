@@ -14,7 +14,7 @@ class ServicesPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(height: Dimentions.hight10,),
-        BigText(text: 'Services',color: AppColors.secondColor,bold: true,),
+        BigText(text: 'Services',color: AppColors.blueTextColor,bold: true,),
         SizedBox(height: Dimentions.hight20,),
         Gridviewservices(),
       ],

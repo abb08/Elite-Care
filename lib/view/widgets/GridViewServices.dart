@@ -59,7 +59,7 @@ class Gridviewservices extends StatelessWidget {
                   child: BigText(
                     text: 'Appointments',
                     color: AppColors.textColor,
-                    size: Dimentions.font26,
+                    size: Dimentions.font24,
                     bold: true,
                   ),
                 )
