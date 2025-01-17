@@ -44,8 +44,10 @@ class CustomTextField extends StatelessWidget {
             obscureText: obscureText,
             keyboardType: onlyNumbers ? TextInputType.number : null,
             decoration: InputDecoration(
+
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(Dimentions.radius10),
+
               ),
               hintText: hint,
               hintStyle: TextStyle(color: AppColors.textColor),

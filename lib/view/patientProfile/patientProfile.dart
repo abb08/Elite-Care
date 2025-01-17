@@ -29,20 +29,16 @@ class Patientprofile extends StatelessWidget {
                     Positioned(
                       left: 0,
                       top: 0,
-                      child: InkWell(
-                          onTap: () {
-                            Get.toNamed(RouteHelpler.patientProfile);
-                          },
-                          child: IconButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            icon: Icon(
-                              Icons.chevron_left_sharp,
-                              size: Dimentions.hight70,
-                              color: AppColors.blueTextColor,
-                            ),
-                          )),
+                      child: IconButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        icon: Icon(
+                          Icons.chevron_left_sharp,
+                          size: Dimentions.hight70,
+                          color: AppColors.blueTextColor,
+                        ),
+                      ),
                     ),
                     Center(
                       child: Padding(

@@ -31,11 +31,16 @@ class MorePage extends StatelessWidget {
         SizedBox(
           height: Dimentions.hight20,
         ),
-        InkWell(onTap: () {}, child: optionContainer("Statistics")),
+        InkWell(onTap: () {
+          Get.toNamed(RouteHelpler.medicalRecordsPage);
+        }, child: optionContainer("Statistics")),
         SizedBox(
           height: Dimentions.hight20,
         ),
-        InkWell(onTap: () {}, child: optionContainer("Forum")),
+        InkWell(onTap: () {
+          Get.toNamed(RouteHelpler.medicationsPage);
+
+        }, child: optionContainer("Forum")),
         SizedBox(
           height: Dimentions.hight20,
         ),
@@ -74,7 +79,6 @@ Widget optionContainer(String text, [Color? color]) {
       ],
     ),
     child: Align(
-
         ///todo: when arabic centerRight
         alignment: Alignment.centerLeft,
         child: BigText(

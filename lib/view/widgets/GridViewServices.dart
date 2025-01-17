@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:elite_care/view/widgets/servicesOption.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -44,7 +42,6 @@ class Gridviewservices extends StatelessWidget {
           // color of grid items
           child: InkWell(
             onTap: () {
-
               ///todo:go to servies page
             },
             child: Stack(
@@ -71,3 +68,8 @@ class Gridviewservices extends StatelessWidget {
     );
   }
 }
+
+
+///todo: after api get model
+///1- make parametersto pass in here like element.name /element.picture/
+///and a function that coresponds with the id so each id passes in different onTap(){get.tonamed();} or if u can just pass in the name and make the get.to('name') static

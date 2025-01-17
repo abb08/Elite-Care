@@ -155,7 +155,7 @@ class RegisterPage extends StatelessWidget {
                   onTap: () {
                     controller.fieldsCheck();
 
-                    ///todo:login if statement if any is empty don't proceed
+                    ///todo:register if statement if any is empty don't proceed
                   },
                   child: Container(
                     margin:
@@ -181,17 +181,17 @@ class RegisterPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     BigText(
-                      text: "Don't have account yet?",
+                      text: "ALREADY HAVE ACCOUNT?",
                       color: AppColors.blackTextColor,
                       size: Dimentions.font14,
                     ),
                     GetBuilder<LogInController>(builder: (controller) {
                       return InkWell(
                           onTap: () {
-                            Get.toNamed(RouteHelpler.registerPage);
+                            Get.toNamed(RouteHelpler.loginPage);
                           },
                           child: BigText(
-                            text: " Register",
+                            text: " Log in",
                             color: AppColors.greenTextColor,
                             size: Dimentions.font14,
                           ));
@@ -199,7 +199,7 @@ class RegisterPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: Dimentions.hight20,
+                  height: Dimentions.hight45,
                 )
               ],
             ),
