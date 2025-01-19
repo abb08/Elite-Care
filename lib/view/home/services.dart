@@ -1,3 +1,5 @@
+import 'package:elite_care/model/dummy/home.dart';
+import 'package:elite_care/model/dummy/services.dart';
 import 'package:elite_care/utils/appColors.dart';
 import 'package:elite_care/utils/dimentions.dart';
 import 'package:elite_care/view/widgets/BigText.dart';
@@ -13,10 +15,10 @@ class ServicesPage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(height: Dimentions.hight10,),
+        SizedBox(height: Dimensions.hight10,),
         BigText(text: 'Services',color: AppColors.blueTextColor,bold: true,),
-        SizedBox(height: Dimentions.hight20,),
-        Gridviewservices(),
+        SizedBox(height: Dimensions.hight20,),
+        Gridviewservices(list: serviceslist,distinations: servicesdis,),
       ],
     );
   }

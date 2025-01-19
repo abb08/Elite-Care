@@ -35,7 +35,7 @@ class Patientprofile extends StatelessWidget {
                         },
                         icon: Icon(
                           Icons.chevron_left_sharp,
-                          size: Dimentions.hight70,
+                          size: Dimensions.hight70,
                           color: AppColors.blueTextColor,
                         ),
                       ),
@@ -43,12 +43,12 @@ class Patientprofile extends StatelessWidget {
                     Center(
                       child: Padding(
                         padding: EdgeInsets.only(
-                            top: Dimentions.hight20, bottom: Dimentions.hight5),
+                            top: Dimensions.hight20, bottom: Dimensions.hight5),
                         child: SvgPicture.asset(
                           'assets/images/logo.svg',
                           fit: BoxFit.contain,
-                          height: Dimentions.hight45,
-                          width: Dimentions.hight45,
+                          height: Dimensions.hight45,
+                          width: Dimensions.hight45,
                         ),
                       ),
                     ),
@@ -57,12 +57,12 @@ class Patientprofile extends StatelessWidget {
               ),
               //divider
               Divider(
-                thickness: Dimentions.hight10,
+                thickness: Dimensions.hight10,
                 color: Colors.grey.shade100,
               ),
               Container(
                 //color: Colors.red,
-                height: Dimentions.profileContainerHight,
+                height: Dimensions.profileContainerHight,
                 width: double.infinity,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -72,12 +72,12 @@ class Patientprofile extends StatelessWidget {
                       flex: 1,
                       child: Center(
                         child: Container(
-                          margin: EdgeInsets.only(left: Dimentions.hight5),
-                          width: Dimentions.profilePictureHight,
-                          height: Dimentions.profilePictureHight,
+                          margin: EdgeInsets.only(left: Dimensions.hight5),
+                          width: Dimensions.profilePictureHight,
+                          height: Dimensions.profilePictureHight,
                           decoration: BoxDecoration(
                             border: Border.all(
-                                width: Dimentions.width3,
+                                width: Dimensions.width3,
                                 color: AppColors.textColor),
                             shape: BoxShape.circle,
                             color: AppColors.secondColor,
@@ -100,18 +100,18 @@ class Patientprofile extends StatelessWidget {
                             text: 'Jenny Old Stones',
                             color: AppColors.mainColor,
                             bold: true,
-                            size: Dimentions.font26,
+                            size: Dimensions.font26,
                           ),
                           BigText(
                             text: 'Patient Account',
                             color: AppColors.textColor,
                             bold: true,
-                            size: Dimentions.font16,
+                            size: Dimensions.font16,
                           ),
                           BigText(
                             text: 'portsudan \\ dem madina',
                             color: AppColors.textColor,
-                            size: Dimentions.font16,
+                            size: Dimensions.font16,
                           ),
                         ],
                       ),
@@ -124,19 +124,19 @@ class Patientprofile extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomRight,
                 child: Padding(
-                    padding: EdgeInsets.only(right: Dimentions.hight10),
+                    padding: EdgeInsets.only(right: Dimensions.hight10),
                     child: InkWell(
                       onTap: () {},
                       child: BigText(
                         text: 'edite account',
                         color: Colors.blue,
-                        size: Dimentions.font16,
+                        size: Dimensions.font16,
                       ),
                     )),
               ),
               Divider(),
               SizedBox(
-                height: Dimentions.hight20,
+                height: Dimensions.hight20,
               ),
               GetBuilder<PaitnetProfileCont>(
                   init: PaitnetProfileCont(),
@@ -147,8 +147,8 @@ class Patientprofile extends StatelessWidget {
                         InkWell(
                           onTap: () => controller.switchTab(true),
                           child: Container(
-                            height: Dimentions.schedulePageItemHight,
-                            width: Dimentions.schedulePageItemWidth,
+                            height: Dimensions.schedulePageItemHight,
+                            width: Dimensions.schedulePageItemWidth,
                             decoration: BoxDecoration(
                               color: controller.chosen
                                   ? AppColors.mainColor
@@ -156,8 +156,8 @@ class Patientprofile extends StatelessWidget {
                               border:
                               Border.all(width: 1, color: AppColors.mainColor),
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(Dimentions.radius10),
-                                  bottomLeft: Radius.circular(Dimentions.radius10)),
+                                  topLeft: Radius.circular(Dimensions.radius10),
+                                  bottomLeft: Radius.circular(Dimensions.radius10)),
                             ),
                             child: Center(
                                 child: BigText(
@@ -172,8 +172,8 @@ class Patientprofile extends StatelessWidget {
                         InkWell(
                           onTap: () => controller.switchTab(false),
                           child: Container(
-                            height: Dimentions.schedulePageItemHight,
-                            width: Dimentions.schedulePageItemWidth,
+                            height: Dimensions.schedulePageItemHight,
+                            width: Dimensions.schedulePageItemWidth,
                             decoration: BoxDecoration(
                               color: controller.chosen == false
                                   ? AppColors.mainColor
@@ -181,8 +181,8 @@ class Patientprofile extends StatelessWidget {
                               border:
                               Border.all(width: 1, color: AppColors.mainColor),
                               borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(Dimentions.radius10),
-                                  bottomRight: Radius.circular(Dimentions.radius10)),
+                                  topRight: Radius.circular(Dimensions.radius10),
+                                  bottomRight: Radius.circular(Dimensions.radius10)),
                             ),
                             child: Center(
                                 child: BigText(
@@ -198,7 +198,7 @@ class Patientprofile extends StatelessWidget {
                     );
                   }),
               SizedBox(
-                height: Dimentions.hight20,
+                height: Dimensions.hight20,
               ),
               GetBuilder<PaitnetProfileCont>(
                   init: PaitnetProfileCont(),

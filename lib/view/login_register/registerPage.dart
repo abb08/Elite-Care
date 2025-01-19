@@ -35,7 +35,7 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: Dimentions.hight10,
+                  height: Dimensions.hight10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -47,42 +47,42 @@ class RegisterPage extends StatelessWidget {
                         icon: Icon(
                           Icons.chevron_left_sharp,
                           color: AppColors.greenTextColor,
-                          size: Dimentions.hight70,
+                          size: Dimensions.hight70,
                         )),
                   ],
                 ),
                 SizedBox(
-                  height: Dimentions.hight30,
+                  height: Dimensions.hight30,
                 ),
                 Image(
                   image: AssetImage("assets/images/logoWithTitle.png"),
-                  height: Dimentions.logInLogoHight,
-                  width: Dimentions.logInLogoWidth,
+                  height: Dimensions.logInLogoHight,
+                  width: Dimensions.logInLogoWidth,
                 ),
                 SizedBox(
-                  height: Dimentions.hight20,
+                  height: Dimensions.hight20,
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding:
-                        EdgeInsets.symmetric(horizontal: Dimentions.width20),
+                        EdgeInsets.symmetric(horizontal: Dimensions.width20),
                     child: BigText(
                       text: 'CHOOSE REGISTRATION TYPE',
                       color: AppColors.textColor,
-                      size: Dimentions.font16,
+                      size: Dimensions.font16,
                     ),
                   ),
                 ),
                 Container(
                     margin: EdgeInsets.symmetric(
-                        horizontal: Dimentions.width20,
-                        vertical: Dimentions.hight10),
+                        horizontal: Dimensions.width20,
+                        vertical: Dimensions.hight10),
                     width: double.maxFinite,
-                    height:Dimentions.hight50,
+                    height:Dimensions.hight50,
                     decoration: BoxDecoration(
                         borderRadius:
-                            BorderRadius.circular(Dimentions.radius10),
+                            BorderRadius.circular(Dimensions.radius10),
                         border: Border.all(color: Colors.grey)),
                     child: GetBuilder<RegisterController>(builder: (controller) {
                       return DropdownButtonHideUnderline(
@@ -98,9 +98,9 @@ class RegisterPage extends StatelessWidget {
                           dropdownColor: Colors.white,
                           icon: const Icon(Icons.keyboard_arrow_down),
                           padding: EdgeInsets.symmetric(
-                              horizontal: Dimentions.width10),
+                              horizontal: Dimensions.width10),
                           isExpanded: true,
-                          style: TextStyle(color: AppColors.textColor,fontSize: Dimentions.font20,fontWeight: FontWeight.w500),
+                          style: TextStyle(color: AppColors.textColor,fontSize: Dimensions.font20,fontWeight: FontWeight.w500),
                           // Array list of items
                         
                           onChanged: (String? newValue) {
@@ -149,7 +149,7 @@ class RegisterPage extends StatelessWidget {
                   );
                 }),
                 SizedBox(
-                  height: Dimentions.hight70,
+                  height: Dimensions.hight70,
                 ),
                 InkWell(
                   onTap: () {
@@ -159,23 +159,23 @@ class RegisterPage extends StatelessWidget {
                   },
                   child: Container(
                     margin:
-                        EdgeInsets.symmetric(horizontal: Dimentions.hight20),
-                    height: Dimentions.hight45,
+                        EdgeInsets.symmetric(horizontal: Dimensions.hight20),
+                    height: Dimensions.hight45,
                     decoration: BoxDecoration(
                       color: AppColors.blueTextColor,
-                      borderRadius: BorderRadius.circular(Dimentions.radius10),
+                      borderRadius: BorderRadius.circular(Dimensions.radius10),
                     ),
                     child: Center(
                       child: BigText(
                         text: "SIGN UP",
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
                         bold: true,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: Dimentions.hight10,
+                  height: Dimensions.hight10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -183,7 +183,7 @@ class RegisterPage extends StatelessWidget {
                     BigText(
                       text: "ALREADY HAVE ACCOUNT?",
                       color: AppColors.blackTextColor,
-                      size: Dimentions.font14,
+                      size: Dimensions.font14,
                     ),
                     GetBuilder<LogInController>(builder: (controller) {
                       return InkWell(
@@ -193,13 +193,13 @@ class RegisterPage extends StatelessWidget {
                           child: BigText(
                             text: " Log in",
                             color: AppColors.greenTextColor,
-                            size: Dimentions.font14,
+                            size: Dimensions.font14,
                           ));
                     })
                   ],
                 ),
                 SizedBox(
-                  height: Dimentions.hight45,
+                  height: Dimensions.hight45,
                 )
               ],
             ),

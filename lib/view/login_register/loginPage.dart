@@ -35,7 +35,7 @@ class LogInPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: Dimentions.hight10,
+                  height: Dimensions.hight10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -47,20 +47,20 @@ class LogInPage extends StatelessWidget {
                         icon: Icon(
                           Icons.chevron_left_sharp,
                           color: AppColors.greenTextColor,
-                          size: Dimentions.hight70,
+                          size: Dimensions.hight70,
                         )),
                   ],
                 ),
                 SizedBox(
-                  height: Dimentions.hight100,
+                  height: Dimensions.hight100,
                 ),
                 Image(
                   image: AssetImage("assets/images/logoWithTitle.png"),
-                  height: Dimentions.logInLogoHight,
-                  width: Dimentions.logInLogoWidth,
+                  height: Dimensions.logInLogoHight,
+                  width: Dimensions.logInLogoWidth,
                 ),
                 SizedBox(
-                  height: Dimentions.hight30,
+                  height: Dimensions.hight30,
                 ),
                 GetBuilder<LogInController>(builder: (controller) {
                   return Column(
@@ -85,7 +85,7 @@ class LogInPage extends StatelessWidget {
                   );
                 }),
                 SizedBox(
-                  height: Dimentions.hight70,
+                  height: Dimensions.hight70,
                 ),
                 InkWell(
                   onTap: () {
@@ -97,23 +97,23 @@ class LogInPage extends StatelessWidget {
                   },
                   child: Container(
                     margin:
-                        EdgeInsets.symmetric(horizontal: Dimentions.hight20),
-                    height: Dimentions.hight45,
+                        EdgeInsets.symmetric(horizontal: Dimensions.hight20),
+                    height: Dimensions.hight45,
                     decoration: BoxDecoration(
                       color: AppColors.blueTextColor,
-                      borderRadius: BorderRadius.circular(Dimentions.radius10),
+                      borderRadius: BorderRadius.circular(Dimensions.radius10),
                     ),
                     child: Center(
                       child: BigText(
                         text: "LOGIN",
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
                         bold: true,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: Dimentions.hight10,
+                  height: Dimensions.hight10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -121,7 +121,7 @@ class LogInPage extends StatelessWidget {
                     BigText(
                       text: "Don't have account yet?",
                       color: AppColors.blackTextColor,
-                      size: Dimentions.font14,
+                      size: Dimensions.font14,
                     ),
                     GetBuilder<LogInController>(builder: (controller) {
                       return InkWell(
@@ -131,11 +131,11 @@ class LogInPage extends StatelessWidget {
                           child: BigText(
                             text: " Register",
                             color: AppColors.greenTextColor,
-                            size: Dimentions.font14,
+                            size: Dimensions.font14,
                           ));
                     })
                   ],
-                ),SizedBox(height: Dimentions.hight20,)
+                ),SizedBox(height: Dimensions.hight20,)
               ],
             ),
           ),

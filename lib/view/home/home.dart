@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:elite_care/model/dummy/home.dart';
 import 'package:elite_care/utils/appColors.dart';
 import 'package:elite_care/utils/dimentions.dart';
 import 'package:elite_care/view/widgets/GridViewServices.dart';
@@ -14,62 +15,65 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      final currentCount = (Dimentions.screenWidth/ 250).toInt();
+      final currentCount = (Dimensions.screenWidth/ 250).toInt();
       final minCount = 2;
-    PageController pageController = PageController(viewportFraction: 1);
+
     return Column(
       children: [
         //ad section
         Container(
           width: double.infinity,
-          height: Dimentions.addhight,
-          child: Stack(children: [
-            PageView.builder(
-                controller: pageController,
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return items(context, index);
-                }),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: DotsIndicator(
-                  decorator: DotsDecorator(
-                    color: Colors.grey,
-                    activeColor: Colors.white,
-                  ),
-                  dotsCount: 5, //pageLength,
-                  position: 3 //currentIndexPage,
-                  ),
-            )
-          ]),
+          height: Dimensions.addhight,
+          child: items(context,)
         ),
-        SizedBox(height: Dimentions.hight5,),
+        SizedBox(height: Dimensions.hight5,),
 
-           Gridviewservices(),
+           Gridviewservices(list: home,distinations: distinations,),
       ],
     );
   }
 }
 
 
-Widget items(context, int index){
-  
-  return InkWell(
-    onTap:  () {
-      //print("tapped   "+ index.toString());
-    ///todo: go to the website
-    },
-    child: Container(
-      margin: EdgeInsets.symmetric(horizontal: Dimentions.hight5),
-      height: Dimentions.addhight,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(Dimentions.radius20),
-        ///todo: this is where the ad goes
-        image: DecorationImage(image: AssetImage('assets/images/Image 10.png')
-       , fit: BoxFit.cover)
-      ),
-      child: Text(index.toString()),
-    ),
-  );
+Widget items(context){
+  PageController pageController = PageController(viewportFraction: 1);
+  return PageView.builder(
+      controller: pageController,
+      itemCount: ads.length,
+      itemBuilder: (context, index) {
+        return InkWell(
+          onTap:  () {
+            Get.toNamed(ads[index]["url"]);
+            //print("tapped   "+ index.toString());
+            ///todo: go to the website
+          },
+          child: Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: Dimensions.hight5),
+                height: Dimensions.addhight,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.radius20),
+                    ///todo: this is where the ad goes
+                    image: DecorationImage(image: AssetImage(ads[index]['img'])
+                        , fit: BoxFit.cover)
+                ),
+
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: DotsIndicator(
+                    decorator: DotsDecorator(
+                      color: Colors.grey,
+                      activeColor: Colors.white,
+                    ),
+                    dotsCount: ads.length, //pageLength,
+                    position: index.toDouble() //currentIndexPage,
+                ),
+              )
+            ],
+          ),
+        );
+      });
 }

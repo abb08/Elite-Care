@@ -1,19 +1,17 @@
+import 'package:elite_care/controller/recordsPageSubPagesCont/testResultsController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controller/recordsPageSubPagesCont/medicationsController.dart';
 import '../../utils/appColors.dart';
 import '../../utils/dimentions.dart';
 import '../widgets/BigText.dart';
 
-class MedicationPage extends StatelessWidget {
-  const MedicationPage({super.key});
+class TestResults extends StatelessWidget {
+  const TestResults({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Initialize the MedicationsController
-    final MedicationsController controller = Get.put(MedicationsController());
-
+    final TestResultsController controller = Get.put(TestResultsController());
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -48,7 +46,7 @@ class MedicationPage extends StatelessWidget {
                           height: Dimensions.hight10,
                         ),
                         BigText(
-                          text: "Medications",
+                          text: "Test Results",
                           color: AppColors.blueTextColor,
                           size: Dimensions.font20,
                           bold: true,
@@ -121,9 +119,9 @@ class MedicationPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(Dimensions.radius20)),
                   child: Center(
                       child: BigText(
-                    text: "all",
-                    bold: true,size: Dimensions.font20,
-                  )),
+                        text: "all",
+                        bold: true,size: Dimensions.font20,
+                      )),
                 ),
                 IconButton(onPressed: () {},
                     icon: Icon(Icons.dehaze,size: Dimensions.hight50,color: AppColors.mainColor,))
@@ -138,10 +136,10 @@ class MedicationPage extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: Dimensions.hight30),
               child: Obx(() {
-                if (controller.filteredMedications.isEmpty) {
+                if (controller.filteredResults.isEmpty) {
                   return Center(
                     child: Text(
-                      "No medications found.",
+                      "No results found.",
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: Dimensions.font14,
@@ -152,42 +150,69 @@ class MedicationPage extends StatelessWidget {
                 return ListView.builder(
                   shrinkWrap: true,
                   physics: AlwaysScrollableScrollPhysics(),
-                  itemCount: controller.filteredMedications.length,
+                  itemCount: controller.filteredResults.length,
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              spacing: 2,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                BigText(
-                                  text: controller.filteredMedications[index]
-                                      .toString(),
-                                  color: Colors.black,
-                                  size: Dimensions.font20,
-                                  bold: true,
-                                ),
-                                BigText(
-                                  text: "200 ml",
-                                  color: AppColors.textColor,
-                                  size: Dimensions.font16,
-                                ),
-                                BigText(
-                                  text: "2/4/2025",
-                                  color: AppColors.blackTextColor,
-                                  size: Dimensions.font16,
-                                ),
-                              ],
+                            Expanded(
+                              flex:10,
+                              child: Column(
+                                spacing: 2,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  BigText(
+                                    text: controller.filteredResults[index]
+                                        .toString(),
+                                    color: Colors.black,
+                                    size: Dimensions.font20,
+                                    bold: true,
+                                  ),
+                                  BigText(
+                                    text: "Eco labs",
+                                    color: AppColors.textColor,
+                                    size: Dimensions.font16,
+                                  ),
+                                  BigText(
+                                    text: "2/ 4/ 2025",
+                                    color: AppColors.blackTextColor,
+                                    size: Dimensions.font16,
+                                  ),
+                                ],
+                              ),
                             ),
-                            InkWell(
-                              onTap: () {},
-                              child: Icon(
-                                Icons.more_vert_sharp,
-                                color: AppColors.mainColor,
-                                size: Dimensions.hight50,
+                            Expanded(
+                              flex:12,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Icon(
+                                      Icons.print,
+                                      color: AppColors.mainColor,
+                                      size: Dimensions.hight34,
+                                    ),
+                                  ),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Icon(
+                                      Icons.share,
+                                      color: AppColors.mainColor,
+                                      size:  Dimensions.hight34,
+                                    ),
+                                  ),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Icon(
+                                      Icons.more_vert_sharp,
+                                      color: AppColors.mainColor,
+                                      size: Dimensions.hight34,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -212,6 +237,7 @@ class MedicationPage extends StatelessWidget {
           // Edit Button
           InkWell(
             onTap: () {
+              print(Dimensions.screenHight);
               /// TODO: Open Pharmacy Page
             },
             child: Container(
@@ -224,7 +250,7 @@ class MedicationPage extends StatelessWidget {
               ),
               child: Center(
                 child: BigText(
-                  text: "Open Pharmacy",
+                  text: "Upload Documents",
                   bold: true,
                 ),
               ),
@@ -238,9 +264,3 @@ class MedicationPage extends StatelessWidget {
     );
   }
 }
-
-/*
-*
-* ListTile(
-                      leading:
-                      trailing: */

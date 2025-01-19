@@ -16,30 +16,30 @@ class PreviousWidget extends StatelessWidget {
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
             //spreadRadius: 5,
-            blurRadius: Dimentions.width3,
+            blurRadius: Dimensions.width3,
             offset: Offset(0, 3), // changes position of shadow
           ),
         ],
       ),
       margin: EdgeInsets.symmetric(
-          horizontal: Dimentions.hight10, vertical: Dimentions.hight10),
-      padding: EdgeInsets.all(Dimentions.hight5),
-      height: Dimentions.hight90,
+          horizontal: Dimensions.hight10, vertical: Dimensions.hight10),
+      padding: EdgeInsets.all(Dimensions.hight5),
+      height: Dimensions.hight90,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          BigText(text: "Test Results No. 132",color: AppColors.blackTextColor,size: Dimentions.font16,),
+          BigText(text: "Test Results No. 132",color: AppColors.blackTextColor,size: Dimensions.font16,),
           InkWell(
             onTap: (){
               ///todo: PDF results download
             },
             child: Column(
               children: [
-                Icon(Icons.my_library_books_sharp,size:Dimentions.iconSize35,color: AppColors.mainColor,)
+                Icon(Icons.my_library_books_sharp,size:Dimensions.iconSize35,color: AppColors.mainColor,)
               ,Row(children: [
-                BigText(text: 'PDF ',color:AppColors.redTextColor,size: Dimentions.font16,bold: true,),
-                  BigText(text: ' result',color:AppColors.blueTextColor,size: Dimentions.font16,bold: true,),
+                BigText(text: 'PDF ',color:AppColors.redTextColor,size: Dimensions.font16,bold: true,),
+                  BigText(text: ' result',color:AppColors.blueTextColor,size: Dimensions.font16,bold: true,),
                 ],)
               ],
             ),

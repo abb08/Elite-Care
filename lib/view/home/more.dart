@@ -15,7 +15,7 @@ class MorePage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          height: Dimentions.hight10,
+          height: Dimensions.hight10,
         ),
         BigText(
           text: 'More',
@@ -23,38 +23,45 @@ class MorePage extends StatelessWidget {
           bold: true,
         ),
         SizedBox(
-          height: Dimentions.hight20,
+          height: Dimensions.hight20,
         ),
-        InkWell(onTap: () {
-          Get.toNamed(RouteHelpler.patientProfile);
-        }, child: optionContainer("Profile")),
+        InkWell(
+            onTap: () {
+              Get.toNamed(RouteHelpler.patientProfile);
+            },
+            child: optionContainer("Profile")),
         SizedBox(
-          height: Dimentions.hight20,
+          height: Dimensions.hight20,
         ),
-        InkWell(onTap: () {
-          Get.toNamed(RouteHelpler.medicalRecordsPage);
-        }, child: optionContainer("Statistics")),
+        InkWell(
+            onTap: () {
+              // Get.toNamed(RouteHelpler.medicalRecordsPage);
+            },
+            child: optionContainer("Statistics")),
         SizedBox(
-          height: Dimentions.hight20,
+          height: Dimensions.hight20,
         ),
-        InkWell(onTap: () {
-          Get.toNamed(RouteHelpler.medicationsPage);
-
-        }, child: optionContainer("Forum")),
+        InkWell(
+            onTap: () {
+              // Get.toNamed(RouteHelpler.testResults);
+            },
+            child: optionContainer("Forum")),
         SizedBox(
-          height: Dimentions.hight20,
+          height: Dimensions.hight20,
         ),
         InkWell(onTap: () {}, child: optionContainer("Settings")),
         SizedBox(
-          height: Dimentions.hight20,
+          height: Dimensions.hight20,
         ),
         InkWell(onTap: () {}, child: optionContainer("FAQ")),
         SizedBox(
-          height: Dimentions.hight45,
+          height: Dimensions.hight45,
         ),
-        InkWell(onTap: () {
-          Get.toNamed(RouteHelpler.loginPage);
-        }, child: optionContainer("Logout", Colors.red)),
+        InkWell(
+            onTap: () {
+              Get.toNamed(RouteHelpler.loginPage);
+            },
+            child: optionContainer("Logout", Colors.red)),
       ],
     );
   }
@@ -62,30 +69,31 @@ class MorePage extends StatelessWidget {
 
 Widget optionContainer(String text, [Color? color]) {
   return Container(
-    width: Dimentions.morePageItemWidth,
-    height: Dimentions.morePageItemHight,
+    width: Dimensions.morePageItemWidth,
+    height: Dimensions.morePageItemHight,
     padding: EdgeInsets.symmetric(
-        horizontal: Dimentions.hight10, vertical: Dimentions.hight5),
+        horizontal: Dimensions.hight10, vertical: Dimensions.hight5),
     decoration: BoxDecoration(
       color: Colors.white,
-      borderRadius: BorderRadius.circular(Dimentions.radius10),
+      borderRadius: BorderRadius.circular(Dimensions.radius10),
       boxShadow: [
         BoxShadow(
           color: Colors.grey.withOpacity(0.5),
           spreadRadius: 1,
-          blurRadius: Dimentions.width3,
+          blurRadius: Dimensions.width3,
           offset: Offset(0, 3), // changes position of shadow
         ),
       ],
     ),
     child: Align(
+
         ///todo: when arabic centerRight
         alignment: Alignment.centerLeft,
         child: BigText(
           text: text,
           color: color ?? AppColors.secondColor,
           bold: true,
-          size: Dimentions.font18,
+          size: Dimensions.font18,
         )),
   );
 }

@@ -1,16 +1,18 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
+import 'package:get/get.dart';
 import '../../utils/appColors.dart';
 import '../../utils/dimentions.dart';
 import 'BigText.dart';
 
 class Gridviewservices extends StatelessWidget {
   final minCount;
+  List<Map<dynamic,String>> list;
+  Map<String,String> distinations;
 
 
-  Gridviewservices({super.key,this.minCount=2});
+  Gridviewservices({super.key,this.minCount=2,required this.list,required this.distinations });
 
   @override
   Widget build(BuildContext context) {
@@ -18,45 +20,45 @@ class Gridviewservices extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-
-        crossAxisCount: max((Dimentions.screenWidth/ 250).toInt(), minCount), // number of items in each row
-        mainAxisSpacing: Dimentions.hight20, // spacing between rows
-        crossAxisSpacing: Dimentions.hight20, // spacing between columns
+        crossAxisCount: max((Dimensions.screenWidth/ 250).toInt(), minCount), // number of items in each row
+        mainAxisSpacing: Dimensions.hight20, // spacing between rows
+        crossAxisSpacing: Dimensions.hight20, // spacing between columns
       ),
       padding: EdgeInsets.all(8.0), // padding around the grid
-      itemCount: 20, // total number of items
+      itemCount: list.length, // total number of items
       itemBuilder: (context, index) {
         return Container(
-          padding: EdgeInsets.all(Dimentions.hight5),
+          padding: EdgeInsets.all(Dimensions.hight5),
           decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),
                   //spreadRadius: 5,
-                  blurRadius: Dimentions.width3,
+                  blurRadius: Dimensions.width3,
                   offset: Offset(0, 3), // changes position of shadow
                 ),
               ],
-              borderRadius: BorderRadius.circular(Dimentions.radius20)),
+              borderRadius: BorderRadius.circular(Dimensions.radius20)),
           // color of grid items
           child: InkWell(
             onTap: () {
+              Get.toNamed(distinations[list[index]["title"]]!);
               ///todo:go to servies page
             },
             child: Stack(
               children: [
                 Center(
                   child: Image(
-                    image: AssetImage('assets/images/homevisiticon.png'),
+                    image: AssetImage(list[index]['img']!),
                   ),
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: BigText(
-                    text: 'Appointments',
+                    text: list[index]['title']!,
                     color: AppColors.textColor,
-                    size: Dimentions.font24,
+                    size: Dimensions.font24,
                     bold: true,
                   ),
                 )

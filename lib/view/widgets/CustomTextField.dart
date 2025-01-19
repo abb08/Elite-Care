@@ -27,17 +27,17 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext contextor) {
     return Padding(
       padding: EdgeInsets.symmetric(
-          horizontal: Dimentions.hight20, vertical: Dimentions.hight10),
+          horizontal: Dimensions.hight20, vertical: Dimensions.hight10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           BigText(
             text: label,
             color: AppColors.textColor,
-            size: Dimentions.font20,
+            size: Dimensions.font20,
           ),
           SizedBox(
-            height: Dimentions.hight10,
+            height: Dimensions.hight10,
           ),
           TextField(
             controller: valueController,
@@ -46,7 +46,7 @@ class CustomTextField extends StatelessWidget {
             decoration: InputDecoration(
 
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(Dimentions.radius10),
+                borderRadius: BorderRadius.circular(Dimensions.radius10),
 
               ),
               hintText: hint,

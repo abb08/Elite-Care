@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'controller/landscapeController.dart';
+
 // main only deals with routes
 void main() async {
   runApp(MyApp());
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(OrientationController(),permanent: true );
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       locale: Get.deviceLocale,

@@ -44,13 +44,13 @@ class MainPage extends StatelessWidget {
     LocalController localController = Get.find(); // this one for the buttons
     return GetBuilder<MainPageController>(builder: (cont) {
       return SafeArea(
-        child: Scaffold(
+        child: Obx(()=>Scaffold(
           backgroundColor: AppColors.whiteColor,
           body: Padding(
             padding: EdgeInsets.only(
-                left: Dimentions.hight5,
-                right: Dimentions.hight5,
-                top: Dimentions.hight5),
+                left: Dimensions.hight5,
+                right: Dimensions.hight5,
+                top: Dimensions.hight5),
             child: Column(
               children: [
                 //AppBar
@@ -63,12 +63,12 @@ class MainPage extends StatelessWidget {
                         Get.toNamed(RouteHelpler.patientProfile);
                       },
                       child: Container(
-                        margin: EdgeInsets.only(left: Dimentions.hight5),
-                        width: Dimentions.hight50,
-                        height: Dimentions.hight50,
+                        margin: EdgeInsets.only(left: Dimensions.hight5),
+                        width: Dimensions.hight50,
+                        height: Dimensions.hight50,
                         decoration: BoxDecoration(
                             border: Border.all(
-                                width: Dimentions.width3, color: AppColors.secondColor),
+                                width: Dimensions.width3, color: AppColors.secondColor),
                             shape: BoxShape.circle,
                             color: AppColors.secondColor,
                             image: DecorationImage(
@@ -78,53 +78,53 @@ class MainPage extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(Dimentions.hight5),
+                      padding: EdgeInsets.all(Dimensions.hight5),
                       child: cont.pageIndex == 0
                           ? Container(
-                              height: Dimentions.hight60,
-                              width: Dimentions.width100,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                    flex: 2,
-                                    child: SvgPicture.asset(
-                                      'assets/images/logo.svg',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 4,
-                                    child: SvgPicture.asset(
-                                      'assets/images/ecoree.svg',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                        height: Dimensions.hight60,
+                        width: Dimensions.width100,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment:
+                          MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              flex: 2,
+                              child: SvgPicture.asset(
+                                'assets/images/logo.svg',
+                                fit: BoxFit.contain,
                               ),
-                            )
-                          : SvgPicture.asset(
-                              'assets/images/logo.svg',
-                              fit: BoxFit.contain,
-                              height: Dimentions.hight45,
-                              width: Dimentions.hight45 ,
                             ),
+                            Expanded(
+                              flex: 4,
+                              child: SvgPicture.asset(
+                                'assets/images/ecoree.svg',
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                          : SvgPicture.asset(
+                        'assets/images/logo.svg',
+                        fit: BoxFit.contain,
+                        height: Dimensions.hight45,
+                        width: Dimensions.hight45 ,
+                      ),
                     ),
                     IconButton(
                       onPressed: () {
                         ///todo:go to notifications
                       },
                       icon: Icon(Icons.notifications),
-                      iconSize: Dimentions.hight50,
+                      iconSize: Dimensions.hight50,
                       color: AppColors.secondColor,
                     ),
                   ],
                 ),
                 //divider
                 SizedBox(
-                  height: Dimentions.hight10,
+                  height: Dimensions.hight10,
                 ),
                 //MainBage from list
                 Expanded(
@@ -146,14 +146,14 @@ class MainPage extends StatelessWidget {
               selectedItemColor: Colors.white,
               unselectedItemColor: Colors.white,
               selectedLabelStyle: TextStyle(
-                fontSize: Dimentions.font16, // Increased font size for selected labels
+                fontSize: Dimensions.font16, // Increased font size for selected labels
                 fontWeight: FontWeight.bold, // Bold for emphasis
               ),
               unselectedLabelStyle: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: Dimentions.font16, // Same size for consistency
+                fontSize: Dimensions.font16, // Same size for consistency
               ),
-              iconSize: Dimentions.iconSize30,
+              iconSize: Dimensions.iconSize30,
               onTap: (index) {
                 print(Get.height.toString());
                 print(Get.width.toString());
@@ -188,7 +188,7 @@ class MainPage extends StatelessWidget {
               ],
             ),
           ),
-        ),
+        ),),
       );
     });
   }
@@ -203,8 +203,8 @@ Widget _buildIcon(String assetPath, int index, int selectedIndex) {
     children: [
       if (isSelected)
         Container(
-          width: Dimentions.hight50,
-          height: Dimentions.hight50,
+          width: Dimensions.hight50,
+          height: Dimensions.hight50,
           decoration: BoxDecoration(
             color: Colors.white,
             shape: BoxShape.circle,

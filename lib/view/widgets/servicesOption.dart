@@ -12,18 +12,18 @@ class ServiesOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(Dimentions.hight5),
+      padding: EdgeInsets.all(Dimensions.hight5),
       decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
               //spreadRadius: 5,
-              blurRadius: Dimentions.width3,
+              blurRadius: Dimensions.width3,
               offset: Offset(0, 3), // changes position of shadow
             ),
           ],
-          borderRadius: BorderRadius.circular(Dimentions.radius20)),
+          borderRadius: BorderRadius.circular(Dimensions.radius20)),
       // color of grid items
       child: InkWell(
         onTap: () {
@@ -42,7 +42,7 @@ class ServiesOption extends StatelessWidget {
               child: BigText(
                 text: 'Appointments',
                 color: AppColors.textColor,
-                size: Dimentions.font20,
+                size: Dimensions.font20,
                 bold: true,
               ),
             )

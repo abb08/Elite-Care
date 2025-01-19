@@ -30,7 +30,7 @@ class MedicalRecords extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.chevron_left_sharp,
-                        size: Dimentions.hight70,
+                        size: Dimensions.hight70,
                         color: AppColors.blueTextColor,
                       ),
                     ),
@@ -38,16 +38,16 @@ class MedicalRecords extends StatelessWidget {
                   Center(
                     child: Padding(
                         padding: EdgeInsets.only(
-                            top: Dimentions.hight20, bottom: Dimentions.hight5),
+                            top: Dimensions.hight20, bottom: Dimensions.hight5),
                         child: Column(
                           children: [
                             SizedBox(
-                              height: Dimentions.hight10,
+                              height: Dimensions.hight10,
                             ),
                             BigText(
                               text: "Medical Record",
                               color: AppColors.blueTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
                           ],
@@ -58,22 +58,22 @@ class MedicalRecords extends StatelessWidget {
             ),
             //divider
             Divider(
-              thickness: Dimentions.hight10,
+              thickness: Dimensions.hight10,
               color: Colors.grey.shade100,
             ),
             SizedBox(
-              height: Dimentions.hight20,
+              height: Dimensions.hight20,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: Dimentions.hight30),
+              padding: EdgeInsets.symmetric(horizontal: Dimensions.hight30),
               child: Column(
-                spacing: Dimentions.hight10,
+                spacing: Dimensions.hight10,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   BigText(
                     text: "Patient Information",
                     color: AppColors.mainColor,
-                    size: Dimentions.font20,
+                    size: Dimensions.font20,
                     bold: true,
                   ),
                   //name
@@ -83,13 +83,13 @@ class MedicalRecords extends StatelessWidget {
                       BigText(
                         text: "Name",
                         color: AppColors.textColor,
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
 
                       ),
                       BigText(
                         text: "jonney something dow",
                         color: AppColors.blackTextColor,
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
                         bold: true,
                       ),
 
@@ -107,13 +107,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Date of Birth",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "26/8/2000",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -128,13 +128,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Name",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "188 sm",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -155,13 +155,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Weight",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "100 kg",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -176,13 +176,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Blood Type",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "A+",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -203,13 +203,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Gender",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "Male",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -224,13 +224,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Weight",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "100 kg",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -244,7 +244,7 @@ class MedicalRecords extends StatelessWidget {
                   BigText(
                     text: "Insurance Information",
                     color: AppColors.mainColor,
-                    size: Dimentions.font20,
+                    size: Dimensions.font20,
                     bold: true,
                   ),
                   //company name+address
@@ -254,19 +254,19 @@ class MedicalRecords extends StatelessWidget {
                       BigText(
                         text: "Insurance Company",
                         color: AppColors.textColor,
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
 
                       ),
                       BigText(
                         text: "delalat almawaseer ",
                         color: AppColors.blackTextColor,
-                        size: Dimentions.font24,
+                        size: Dimensions.font24,
                         bold: true,
                       ),
                       BigText(
                         text: "surag station, Omdurman, Khartoum",
                         color: AppColors.textColor,
-                        size: Dimentions.font16,
+                        size: Dimensions.font16,
                       ),
                     ],
                   ),
@@ -282,13 +282,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Policy Number",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "4096",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -303,13 +303,13 @@ class MedicalRecords extends StatelessWidget {
                             BigText(
                               text: "Expiry Date",
                               color: AppColors.textColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
 
                             ),
                             BigText(
                               text: "20/1/2025",
                               color: AppColors.blackTextColor,
-                              size: Dimentions.font20,
+                              size: Dimensions.font20,
                               bold: true,
                             ),
 
@@ -323,7 +323,7 @@ class MedicalRecords extends StatelessWidget {
                   BigText(
                     text: "Emergency Contact",
                     color: AppColors.mainColor,
-                    size: Dimentions.font20,
+                    size: Dimensions.font20,
                     bold: true,
                   ),
                   Column(
@@ -332,13 +332,13 @@ class MedicalRecords extends StatelessWidget {
                       BigText(
                         text: "Name",
                         color: AppColors.textColor,
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
 
                       ),
                       BigText(
                         text: "Penny something dow",
                         color: AppColors.blackTextColor,
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
                         bold: true,
                       ),
 
@@ -350,13 +350,13 @@ class MedicalRecords extends StatelessWidget {
                       BigText(
                         text: "Phone Number",
                         color: AppColors.textColor,
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
 
                       ),
                       BigText(
                         text: "+249991858578",
                         color: AppColors.blackTextColor,
-                        size: Dimentions.font20,
+                        size: Dimensions.font20,
                         bold: true,
                       ),
                     ],
@@ -364,24 +364,24 @@ class MedicalRecords extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: Dimentions.hight70,),
+            SizedBox(height: Dimensions.hight70,),
             //edite button
             InkWell(
               onTap: (){
                 ///todo: edite page
               },
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: Dimentions.hight34),
-                height: Dimentions.hight45,
+                margin: EdgeInsets.symmetric(horizontal: Dimensions.hight34),
+                height: Dimensions.hight45,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimentions.radius10),
+                  borderRadius: BorderRadius.circular(Dimensions.radius10),
                   color: AppColors.mainColor
                 ),
                 child: Center(child: BigText(text: "Edit",bold: true,),),
               ),
             ),
-            SizedBox(height: Dimentions.hight30,),
+            SizedBox(height: Dimensions.hight30,),
           ],
         ),
       ),

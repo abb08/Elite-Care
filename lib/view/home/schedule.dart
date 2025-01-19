@@ -13,7 +13,7 @@ class SchedulePage extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: Dimentions.hight10,
+          height: Dimensions.hight10,
         ),
         BigText(
           text: 'Schedule',
@@ -21,7 +21,7 @@ class SchedulePage extends StatelessWidget {
           bold: true,
         ),
         SizedBox(
-          height: Dimentions.hight20,
+          height: Dimensions.hight20,
         ),
         GetBuilder<SchedulePageController>(
             init: SchedulePageController(),
@@ -32,8 +32,8 @@ class SchedulePage extends StatelessWidget {
                   InkWell(
                     onTap: () => controller.switchTab(true),
                     child: Container(
-                      height: Dimentions.schedulePageItemHight,
-                      width: Dimentions.schedulePageItemWidth,
+                      height: Dimensions.schedulePageItemHight,
+                      width: Dimensions.schedulePageItemWidth,
                       decoration: BoxDecoration(
                         color: controller.chosen
                             ? AppColors.mainColor
@@ -41,8 +41,8 @@ class SchedulePage extends StatelessWidget {
                         border:
                             Border.all(width: 1, color: AppColors.mainColor),
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(Dimentions.radius10),
-                            bottomLeft: Radius.circular(Dimentions.radius10)),
+                            topLeft: Radius.circular(Dimensions.radius10),
+                            bottomLeft: Radius.circular(Dimensions.radius10)),
                       ),
                       child: Center(
                           child: BigText(
@@ -57,8 +57,8 @@ class SchedulePage extends StatelessWidget {
                   InkWell(
                     onTap: () => controller.switchTab(false),
                     child: Container(
-                      height: Dimentions.schedulePageItemHight,
-                      width: Dimentions.schedulePageItemWidth,
+                      height: Dimensions.schedulePageItemHight,
+                      width: Dimensions.schedulePageItemWidth,
                       decoration: BoxDecoration(
                         color: controller.chosen == false
                             ? AppColors.mainColor
@@ -66,8 +66,8 @@ class SchedulePage extends StatelessWidget {
                         border:
                             Border.all(width: 1, color: AppColors.mainColor),
                         borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(Dimentions.radius10),
-                            bottomRight: Radius.circular(Dimentions.radius10)),
+                            topRight: Radius.circular(Dimensions.radius10),
+                            bottomRight: Radius.circular(Dimensions.radius10)),
                       ),
                       child: Center(
                           child: BigText(
@@ -83,7 +83,7 @@ class SchedulePage extends StatelessWidget {
               );
             }),
         SizedBox(
-          height: Dimentions.hight20,
+          height: Dimensions.hight20,
         ),
         GetBuilder<SchedulePageController>(
             init: SchedulePageController(),
@@ -97,8 +97,8 @@ class SchedulePage extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsets.symmetric(
-                            vertical: Dimentions.hight5,
-                            horizontal: Dimentions.width20),
+                            vertical: Dimensions.hight5,
+                            horizontal: Dimensions.width20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -108,15 +108,15 @@ class SchedulePage extends StatelessWidget {
                                   text: 'Dr.Dracula',
                                   color: Colors.black,
                                   bold: true,
-                                  size: Dimentions.font16,
+                                  size: Dimensions.font16,
                                 ),
                                 BigText(
                                   text: 'Dermatologist',
                                   color: Colors.black45,
-                                  size: Dimentions.font16,
+                                  size: Dimensions.font16,
                                 ),
                                 SizedBox(
-                                  height: Dimentions.hight30,
+                                  height: Dimensions.hight30,
                                 ),
                                 Row(
                                   children: [
@@ -137,18 +137,18 @@ class SchedulePage extends StatelessWidget {
                                         text: '2:30 PM',
                                         color: Colors.black,
                                         bold: true,
-                                        size:Dimentions.font16,
+                                        size:Dimensions.font16,
                                       )
                                     : BigText(
                                         text: 'visited',
                                         color: Colors.green,
                                         bold: true,
-                                        size: Dimentions.font26,
+                                        size: Dimensions.font26,
                                       ),
                                 BigText(
                                   text: '2/8/2024',
                                   color: Colors.black45,
-                                  size: Dimentions.font16,
+                                  size: Dimensions.font16,
                                 ),
                               ],
                             ),
@@ -158,7 +158,7 @@ class SchedulePage extends StatelessWidget {
                       //divider
                       Padding(
                         padding: EdgeInsets.symmetric(
-                            horizontal: Dimentions.width10),
+                            horizontal: Dimensions.width10),
                         child: Divider(),
                       ),
                     ],

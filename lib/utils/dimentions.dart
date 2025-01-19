@@ -1,104 +1,92 @@
 import 'package:get/get.dart';
 
-class Dimentions {
+import '../controller/landscapeController.dart';
 
-   static double screenHight = Get.height;
-   static double screenWidth = Get.width;
+class Dimensions {
+  static final OrientationController _orientationController = Get.find<OrientationController>();
 
-   //u make a suitable view in pixils then get the page hoght and devide to get the factor
-//screenhight/(x)
-  //x=desiredhight i.e=10px / current screen hight i.e. 840.123
-// home
-  // advertisment
-  static double addhight = screenHight/3.557251908;
+  static double get screenHight => _orientationController.screenHeight.value;
+  static double get screenWidth =>  _orientationController.screenWidth.value;
 
+  // Home
+  static double get addhight => screenHight / 3.557251908;
 
-//
-   static double pageView = screenHight/2.64;
-   static double pageViewContainer = screenHight/3.84;
-   static double pageTextContainer = screenHight/7.03;
-//hight
-  static double hight5 = screenHight/168.6857143;
-   static double hight10 = screenHight/84.4;
-   static double hight15 = screenHight/56.27;
-   static double hight20 = screenHight/42.2;
-   static double hight45 = screenHight/18.76;
-   static double hight30 = screenHight/28.13;
-  static double hight34 = screenHight/27.41176471;
+  // Page view
+  static double get pageView => screenHight / 2.64;
+  static double get pageViewContainer => screenHight / 3.84;
+  static double get pageTextContainer => screenHight / 7.03;
 
-  static double hight50 = screenHight/16.86857143;
-  static double hight60 = screenHight/14.05714286;
-  static double hight70 = screenHight/12.04897959;
-  static double hight90 = screenHight/10.35555556;
-  static double hight100 = screenHight/9.32;
+  // Heights
+  static double get hight5 => screenHight / 168.6857143;
+  static double get hight10 => screenHight / 84.4;
+  static double get hight15 => screenHight / 56.27;
+  static double get hight20 => screenHight / 42.2;
+  static double get hight30 => screenHight / 28.13;
+  static double get hight34 => screenHight / 27.41176471;
+  static double get hight40 => screenHight / 21.08571429;
+  static double get hight45 => screenHight / 18.76;
+  static double get hight50 => screenHight / 16.86857143;
+  static double get hight60 => screenHight / 14.05714286;
+  static double get hight70 => screenHight / 12.04897959;
+  static double get hight90 => screenHight / 10.35555556;
+  static double get hight100 => screenHight / 9.32;
 
+  // Widths
+  static double get width3 => screenHight / 281.1428571;
+  static double get width10 => screenHight / 84.4;
+  static double get width15 => screenHight / 56.27;
+  static double get width20 => screenHight / 42.2;
+  static double get width30 => screenHight / 28.13;
+  static double get width45 => screenHight / 18.76;
+  static double get width100 => screenHight / 8.434285714;
 
-//width
-   // ur still using hight maybe u wanna change it later
-  static double width3 = screenHight/281.1428571;
-  static double width10 = screenHight/84.4;
-   static double width15 = screenHight/56.27;
-   static double width20 = screenHight/42.2;
-   static double width30 = screenHight/28.13;
-   static double width45 = screenHight/18.76;
-  static double width100 = screenHight/8.434285714;
-//font size
+  // Font sizes
+  static double get font10 => screenHight / 84.34285714;
+  static double get font14 => screenHight / 60.24489796;
+  static double get font16 => screenHight / 52.71428571;
+  static double get font18 => screenHight / 46.85714286;
+  static double get font20 => screenHight / 42.17142857;
+  static double get font24 => screenHight / 35.14285714;
+  static double get font26 => screenHight / 32.43956044;
+  static double get font30 => screenHight / 28.11428571;
 
-  static double font20= screenHight/42.17142857;
-  static double font24 = screenHight/35.14285714;
-  static double font26 = screenHight/32.43956044;
-  static double font10= screenHight/84.34285714;
-  static double font14= screenHight/60.24489796;
-  static double font16 = screenHight/52.71428571;
-  static double font18 = screenHight/46.85714286;
-  static double font30 = screenHight/28.11428571;
- // static double fontx = screenHight*0.016042781;
-  //static double font22 = screenHight*0.022058824;
+  // Radius
+  static double get radius10 => screenHight / 84.34285714;
+  static double get radius15 => screenHight / 56.27;
+  static double get radius20 => screenHight / 42.2;
+  static double get radius30 => screenHight / 28.13;
 
+  // Icon sizes
+  static double get iconSize16 => screenHight / 52.75;
+  static double get iconSize24 => screenHight / 35.17;
+  static double get iconSize30 => screenHight / 28.11428571;
+  static double get iconSize35 => screenHight / 24.09795918;
 
-  //raduis
-  static double radius10= screenHight/84.34285714;
-   static double radius15= screenHight/56.27;
-  static double radius20= screenHight/42.2;
-   static double radius30= screenHight/28.13;
-   //icon size
-   static double iconSize24 = screenHight/35.17;
-  static double iconSize16 = screenHight/52.75;
-  static double iconSize30 = screenHight/28.11428571;
-  static double iconSize35 = screenHight/24.09795918;
+  // ListView sizes
+  static double get listViewImageSize => screenWidth / 3.25;
+  static double get listViewTextSize => screenWidth / 3.9;
 
-   //listview size
-   static double listViewImageSize = screenWidth/3.25;
-   static double listViewTextSize = screenWidth/3.9;
+  // Food details
+  static double get foodImagesize => screenHight / 2.41;
 
+  // Bottom height
+  static double get bottomHightBar => screenHight / 6.25;
 
-   //food details
-  static double foodImagesize= screenHight/2.41;
+  // More page
+  static double get morePageItemHight => screenHight / 19.82978723;
+  static double get morePageItemWidth => screenWidth / 1.105943152;
 
+  // Schedule
+  static double get schedulePageItemHight => screenHight / 21.6744186;
+  static double get schedulePageItemWidth => screenWidth / 2.532544379;
 
-  //bottom hoght
-  static double bottomHightBar= screenHight/6.25;
-  //more page
-  static double morePageItemHight= screenHight/19.82978723;
-  static double morePageItemWidth= screenWidth/1.105943152;
-  //schedule
-  static double schedulePageItemHight= screenHight/21.6744186;
-  static double schedulePageItemWidth= screenWidth/2.532544379;
-  //profile
-  static double profileContainerHight= screenHight/3.728;
-  static double profilePictureHight= screenHight/6.891961843;
-  static double profileUpcomingContainerHight= screenHight/3.669291339;
+  // Profile
+  static double get profileContainerHight => screenHight / 3.728;
+  static double get profilePictureHight => screenHight / 6.891961843;
+  static double get profileUpcomingContainerHight => screenHight / 3.669291339;
 
-
-
-  //loginPage
-
-  static double logInLogoHight= screenHight/5.290644868;
-  static double logInLogoWidth= screenHight/3.864250073;
-
-
-
-
-
+  // LoginPage
+  static double get logInLogoHight => screenHight / 5.290644868;
+  static double get logInLogoWidth => screenHight / 3.864250073;
 
 }
