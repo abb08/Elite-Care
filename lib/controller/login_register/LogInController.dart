@@ -8,9 +8,10 @@ class LogInController extends GetxController {
   bool numberValidator = false;
   bool passwordValidator = false;
 
-  void fieldsEmptyCheck() {
+  bool fieldsEmptyCheck() {
    numberValidator=numberVal.text.isEmpty?true:false;
    passwordValidator=passwordVal.text.isEmpty?true:false;
     update();
+  return numberValidator | passwordValidator?true:false;
   }
 }

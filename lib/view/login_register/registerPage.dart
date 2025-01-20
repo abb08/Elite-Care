@@ -153,8 +153,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    controller.fieldsCheck();
-
+                    controller.fieldsCheck()?null:Get.toNamed(RouteHelpler.loginPage);
                     ///todo:register if statement if any is empty don't proceed
                   },
                   child: Container(

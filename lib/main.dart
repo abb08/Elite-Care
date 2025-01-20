@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       translations: MainLocal(),
       //which is default so this line is pointless
 
-      initialRoute: RouteHelpler.getHome(),
+      initialRoute: RouteHelpler.getLoginPage(),
       unknownRoute: RouteHelpler.routes[0],
       getPages: RouteHelpler.routes,
     );

@@ -23,7 +23,7 @@ class RegisterController extends GetxController {
 
 
 
-  void fieldsCheck() {
+  bool fieldsCheck() {
     nameValidator = nameValue.text.isEmpty ? true : false;
     numberValidator = numberValue.text.isEmpty ? true : false;
     passwordValidator = passwordValue.text.isEmpty ? true : false;
@@ -31,6 +31,7 @@ class RegisterController extends GetxController {
     confirmPasswordValue.text.isEmpty  ? true : false;
     passwordMismatch = (passwordValue.text != confirmPasswordValue.text) |confirmPasswordValidator?  true:false ;
     update();
+    return nameValidator|passwordMismatch?true:false;
   }
 
   void dropDownSelect(selected){

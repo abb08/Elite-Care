@@ -1,7 +1,9 @@
 import 'package:elite_care/utils/appColors.dart';
 import 'package:elite_care/view/widgets/BigText.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../routes/routes_helper.dart';
 import '../../../utils/dimentions.dart';
 
 class PreviousWidget extends StatelessWidget {
@@ -32,6 +34,7 @@ class PreviousWidget extends StatelessWidget {
           BigText(text: "Test Results No. 132",color: AppColors.blackTextColor,size: Dimensions.font16,),
           InkWell(
             onTap: (){
+              Get.toNamed(RouteHelpler.unKnown);
               ///todo: PDF results download
             },
             child: Column(

@@ -35,7 +35,7 @@ class MorePage extends StatelessWidget {
         ),
         InkWell(
             onTap: () {
-              // Get.toNamed(RouteHelpler.medicalRecordsPage);
+               Get.toNamed(RouteHelpler.unKnown);
             },
             child: optionContainer("Statistics")),
         SizedBox(
@@ -43,17 +43,21 @@ class MorePage extends StatelessWidget {
         ),
         InkWell(
             onTap: () {
-              // Get.toNamed(RouteHelpler.testResults);
+              Get.toNamed(RouteHelpler.unKnown);
             },
             child: optionContainer("Forum")),
         SizedBox(
           height: Dimensions.hight20,
         ),
-        InkWell(onTap: () {}, child: optionContainer("Settings")),
+        InkWell(onTap: () {
+          Get.toNamed(RouteHelpler.unKnown);
+        }, child: optionContainer("Settings")),
         SizedBox(
           height: Dimensions.hight20,
         ),
-        InkWell(onTap: () {}, child: optionContainer("FAQ")),
+        InkWell(onTap: () {
+          Get.toNamed(RouteHelpler.unKnown);
+        }, child: optionContainer("FAQ")),
         SizedBox(
           height: Dimensions.hight45,
         ),

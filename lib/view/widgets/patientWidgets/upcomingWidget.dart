@@ -2,6 +2,9 @@ import 'package:elite_care/utils/appColors.dart';
 import 'package:elite_care/utils/dimentions.dart';
 import 'package:elite_care/view/widgets/BigText.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../routes/routes_helper.dart';
 
 class UpcomingWidget extends StatelessWidget {
   const UpcomingWidget({super.key});
@@ -74,6 +77,7 @@ class UpcomingWidget extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
+                        Get.toNamed(RouteHelpler.unKnown);
                         ///todo:ontap for sp button
                       },
                       child: Container(
@@ -110,6 +114,7 @@ class UpcomingWidget extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
+                  Get.toNamed(RouteHelpler.unKnown);
                   ///todo:clinic location
                 },
                 child: BigText(
@@ -175,6 +180,7 @@ class UpcomingWidget extends StatelessWidget {
             children: [
               InkWell(
                   onTap: () {
+                    Get.toNamed(RouteHelpler.unKnown);
                     ///todo:edite booking
                   },
                   child: BigText(

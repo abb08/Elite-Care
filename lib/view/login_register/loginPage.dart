@@ -89,9 +89,7 @@ class LogInPage extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    controller.fieldsEmptyCheck();
-                    print(controller.numberValidator.toString() +
-                        controller.passwordValidator.toString());
+                    controller.fieldsEmptyCheck()?null:Get.toNamed(RouteHelpler.home);
 
                     ///todo:login if statement if any is empty don't proceed
                   },

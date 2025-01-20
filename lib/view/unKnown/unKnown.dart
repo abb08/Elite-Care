@@ -8,7 +8,7 @@ class Unknown extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(child:
-      Text("Unknown contact devs"),
+      Text("On Progress"),
         ///todo: make sure this doesnt show up at any case
       ),
     );

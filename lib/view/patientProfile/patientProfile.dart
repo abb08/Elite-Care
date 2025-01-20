@@ -126,7 +126,7 @@ class Patientprofile extends StatelessWidget {
                 child: Padding(
                     padding: EdgeInsets.only(right: Dimensions.hight10),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () { Get.toNamed(RouteHelpler.unKnown);},
                       child: BigText(
                         text: 'edite account',
                         color: Colors.blue,
